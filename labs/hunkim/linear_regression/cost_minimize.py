@@ -28,13 +28,8 @@ sess = tf.Session()
 sess.run(init)
 
 for step in range(20):
-    sess.run(update, feed_dict={X:x_data, Y:y_data})
-    print(step, sess.run(cost, feed_dict={X:x_data, Y:y_data}), sess.run(W))
+    sess.run(update, feed_dict={X: x_data, Y: y_data})
+    print(step, sess.run(cost, feed_dict={X: x_data, Y: y_data}), sess.run(W))
 
 print(sess.run(hyphthesis, feed_dict={X: 5}))
 print(sess.run(hyphthesis, feed_dict={X: 2.5}))
-
-
-
-
-

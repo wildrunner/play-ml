@@ -2,11 +2,11 @@
 
 import tensorflow as tf
 
-x_data = [1,2,3]
-y_data = [1,2,3]
+x_data = [1, 2, 3]
+y_data = [1, 2, 3]
 
-W = tf.Variable(tf.random_uniform([1],-1.0,1.0))
-b = tf.Variable(tf.random_uniform([1],-1.0,1.0))
+W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 
 hyp = W * x_data + b
 
@@ -23,5 +23,5 @@ session.run(init)
 
 for step in range(2001):
     session.run(train)
-    if (step%20 == 0):
-        print(step,session.run(cost),session.run(W),session.run(b))
+    if step % 20 == 0:
+        print(step, session.run(cost), session.run(W), session.run(b))
