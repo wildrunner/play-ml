@@ -15,6 +15,7 @@ hypothesis = tf.nn.softmax(tf.matmul(X, W))
 
 learning_rate = 0.01
 
+# Cross-Entropy cost function
 cost = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(hypothesis), reduction_indices=1))
 
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
